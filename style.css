@@ -1,0 +1,173 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.cards{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row;
+    max-height: 1100vh;
+}
+.cards img{
+   margin: 10px;
+   border: 3px solid #EEEEEE;
+   box-shadow: 3px 3px 8px 0px rgba(0,0,0.3,);
+   max-width: 23vw;
+}
+.contenedor {
+	background:#AEE1FC;
+	width:90%;
+	max-width:1000px;
+	margin:auto;
+
+	/* Flexbox */
+	display:flex;
+	flex-flow:row wrap;
+}
+body {
+	background:#AEE1FC;
+}
+header {
+	background: #B0C4DE;
+	width:100%;
+	padding: 5px;
+}
+nav{
+	width: 90%;
+
+
+	/* Flexbox */
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+
+	flex-direction:row;
+	
+}
+header .logo {
+	color:#B0C4DE;
+	font-size:20px;
+}
+header .logo img {
+	width:200px;
+	vertical-align:baseline;
+}
+header .logo a {
+	color: rgb(63, 60, 60);
+	font-family:fantasy;
+
+	text-align: center;
+	line-height:50px;
+}
+header nav {
+	width:50%;
+	/* Flexbox */
+
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+}
+header nav a {
+	background:#B0C4DE;
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+	padding:10px;
+
+	/* Flexbox */
+	flex-grow:1;
+}
+header nav a:hover {
+	background:#B0C4DE;
+}
+.main {
+	background:#AEE1FC;
+	padding:20px;
+
+	flex:1 1 70%;
+	/*flex:1;*/
+}
+.main article {
+	margin-bottom: 20px;
+	padding-bottom:20px;
+	border-bottom:1px solid #000;
+}
+.main article:nth-last-child(1){
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom:none;
+}
+aside {
+	background:#AEE1FC;
+	padding:10px;
+	/*FLEX*/
+	flex:1 1 30%;
+	/*flex:0 0 300px;*/
+
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+	justify-content:flex-start;
+}
+
+footer {
+	background:#AEE1FC;
+	width: 90%;
+	padding:20px;
+
+	/* Flexbox */
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+
+footer .social {
+	background:#E9C891;
+}
+footer .social a {
+	color:#fff;
+	text-decoration: none;
+	padding:10px;
+	display: inline-block;
+}
+@media screen and (max-width: 800px) {
+	.contenedor {
+		flex-direction:column;
+	}
+
+	header {
+		flex-direction:column;
+		padding:0;
+	}
+
+	header .logo {
+		margin:20px 0;
+	}
+
+	header nav {
+		width: 100%;
+	}
+
+	aside {
+		flex-direction:row;
+		flex:0;
+	}
+
+	aside .widget {
+		flex-grow:1;
+	}
+}
+@media screen and (max-width: 600px) {
+	aside {
+		flex-direction:column;
+	}
+
+	footer {
+		justify-content:space-around;
+	}
+}
